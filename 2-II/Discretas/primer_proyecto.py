@@ -32,12 +32,12 @@ def tabla(*args):
             variables = sorted(variables)
 
             dicc = {
-                'True': '1',
-                'False': '0',
+                'True': 't',
+                'False': 'f',
                 True: '1',
                 False: '0',
-                '1': '1',
-                '0': '0',
+                'v': 'v',
+                'f': 'f',
             }
 
             main_frame = Frame(
@@ -137,12 +137,12 @@ def tabla(*args):
 
 def ayuda():
     top = Toplevel()
-    top.configure(background='#333333')
+    top.configure(background='grey')
     top.title('Ayuda')
     top.geometry('800x500')
     btn2.config(state='disable')
 
-    l = Label(top, text="Generador De Tabla De Verdad ", fg='#FFF', bg='#333333',
+    l = Label(top, text="Intrucciones", fg='#FFF', bg='#333333',
               font=('Garamond bold', 15, 'bold italic'))
     l.place(x=250, y=30)
 
@@ -158,13 +158,13 @@ def ayuda():
               fg='#FFF', bg='#333333', font=('Garamond bold', 11, 'bold '))
     l.place(x=50, y=150)
 
-    l = Label(top, text="Operador AND   ─>   . ó *  ", fg='#FFF', bg='#333333', font=('Garamond bold', 12, 'bold'))
+    l = Label(top, text="Operador ^   ─>   . ó *  ", fg='#FFF', bg='#333333', font=('Garamond bold', 12, 'bold'))
     l.place(x=250, y=220)
 
-    l = Label(top, text="Operador OR   ─>   + ", fg='#FFF', bg='#333333', font=('Garamond bold', 12, 'bold'))
+    l = Label(top, text="Operador v   ─>   + ", fg='#FFF', bg='#333333', font=('Garamond bold', 12, 'bold'))
     l.place(x=250, y=270)
 
-    l = Label(top, text="Operador NOT   ─>   ~ ó '  ", fg='#FFF', bg='#333333', font=('Garamond bold', 12, 'bold'))
+    l = Label(top, text="Operador ¬   ─>   ~ ó '  ", fg='#FFF', bg='#333333', font=('Garamond bold', 12, 'bold'))
     l.place(x=250, y=320)
 
     l = Label(top, text="Operador XOR   ─>   ^   ", fg='#FFF', bg='#333333', font=('Garamond bold', 12, 'bold'))
@@ -200,7 +200,7 @@ def transformacion(funcion):
 
 root = Tk()
 root.title('\tGenerador Tabla De Verdad')
-root.configure(background='#CCC')
+root.configure(background='Blue')
 root.geometry('550x550')
 
 lab = Label(root)
@@ -208,28 +208,32 @@ main_frame = Frame(root)
 
 inp = StringVar()
 inpt = Entry(textvar=inp, width=35)
-inpt.pack(pady=5)
+inpt.pack(pady=40)
 
-btn = Button(root, text='Enviar', fg='#000', bg='#FF9D00', font=('Helvetica', 10, 'bold'), command=tabla)
-btn.pack(pady=5)
+btn = Button(root, text='Enviar', fg='white', bg='blue', font=('Helvetica', 10, 'bold'), command=tabla)
+btn.pack(pady=1)
 
-btn2 = Button(root, text='Ayuda', fg='#000', bg='#39CC68', font=('Helvetica', 10, 'bold'), command=ayuda)
-btn2.pack(pady=5)
+btn2 = Button(root, text='Ayuda', fg='white', bg='blue', font=('Helvetica', 10, 'bold'), command=ayuda)
+btn2.pack(pady=1)
 
-l = Label(root, text="Br.Enmanuel Urbina ®", fg='#000', bg='#DDD', font=('Helvetica', 10, 'bold'))
-l.place(x=5, y=5)
+l = Label(root, text="Universidad Nacional de Ingenieria", fg='White', bg='Blue', font=('Times new roman', 15, 'bold'))
+l.place(x= 140, y = 10)
 
-l = Label(root, text="Br.Ronier Padilla ®", fg='#000', bg='#DDD', font=('Helvetica', 10, 'bold'))
-l.place(x=5, y=25)
+l = Label(root, text="Br.Enmanuel Urbina ®", fg='white', bg='Blue', font=('Helvetica', 10, 'bold'))
+l.place(x=5, y=40)
 
-l = Label(root, text="Br.Marlon Gonzales ®", fg='#000', bg='#DDD', font=('Helvetica', 10, 'bold'))
-l.place(x=5, y=45)
+l = Label(root, text="Br.Ronier Padilla ®", fg='white', bg='blue', font=('Helvetica', 10, 'bold'))
+l.place(x=5, y=60)
 
-l = Label(root, text="Tablas de Verdad ", fg='#000', bg='#DDD', font=('Helvetica', 10, 'bold'))
-l.place(x=400, y=15)
+l = Label(root, text="Br.Marlon Gonzales ®", fg='white', bg='blue', font=('Helvetica', 10, 'bold'))
+l.place(x=5, y=80)
 
-l = Label(root, text="Matematicas Discretas ", fg='#000', bg='#DDD', font=('Helvetica', 10, 'bold'))
-l.place(x=370, y=40)
+l = Label(root, text="Tablas de Verdad ", fg='white', bg='blue', font=('Helvetica', 10, 'bold'))
+l.place(x=400, y=40)
+
+l = Label(root, text="Matematicas Discretas ", fg='white', bg='blue', font=('Helvetica', 10, 'bold'))
+l.place(x=380, y=60)
+
 
 inpt.focus()
 root.bind("<Return>", tabla)
