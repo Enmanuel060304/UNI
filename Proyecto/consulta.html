@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="index.css"> 
+</head>
+<body>
+    <header>
+
+        <div class="content">
+
+            <div class="menu container">
+                <a href="index.html" class="logo"> FODEMI</a>
+                <input type="checkbox" id="menu">
+                <label for="menu">
+                    <img src="img/menu.png" class="menu-icono" alt="">
+                </label>
+
+                <nav class="navbar">
+                    <ul>
+
+                        <li> <a href="index.html">Datos Cliente</a> </li>
+                        <li> <a href="servicios.html">Datos Fiador</a> </li>
+                        <li> <a href="productos.html">Bienes en garantia</a> </li>
+                        <li> <a href="consulta.html">Credito</a> </li>
+                        <li> <a href="contactos.html">Cuotas</a> </li>
+                    </ul>
+
+
+                </nav>
+            </div>
+
+        </div>
+
+    </header>
+    <h2>Registro de Credito</h2>
+<input type="text" id="search" onkeyup="searchFunction()" placeholder="Buscar por ID_Credito">
+<table id="myTable">
+ <tr>
+    <th>ID_Credito</th>
+    <th>Monto</th>
+    <th>Moneda</th>
+    <th>Tasa de Interes</th>
+    <th>Sector Economico</th>
+    <th>Fondo</th>
+    <th>Fecha de Apertura</th>
+    <th>Fecha de Vencimiento</th>
+    <th>Periocidad</th>
+    <th>Estado</th>
+    <th>Promotor</th>
+    <th>ID_Amparo</th>
+ </tr>
+ <tr>
+    <td>001</td>
+    <td>20000</td>
+    <td>Cordobas</td>
+    <td>0.6</td>
+    <td>Credito Personales</td>
+    <td>Fondos Propios</td>
+    <td>06/05/2021</td>
+    <td>06/11/2021</td>
+    <td>Principal Nivelado</td>
+    <td>6 Meses</td>
+    <td>Cancelado</td>
+   
+    <td>0001</td>
+ </tr>
+ <tr>
+    <td>002</td>
+    <td>15000</td>
+    <td>Cordobas</td>
+    <td>0.6</td>
+    <td>Credito Personales</td>
+    <td>Fondos Propios</td>
+    <td>06/05/2022</td>
+    <td>06/11/2022</td>
+    <td>Principal Nivelado</td>
+    <td>6 Meses</td>
+    <td>Cancelado</td>
+   
+    <td>0002</td>
+ </tr>
+ <tr>
+    <td>003</td>
+    <td>18000</td>
+    <td>Cordobas</td>
+    <td>0.6</td>
+    <td>Credito Personales</td>
+    <td>Fondos Propios</td>
+    <td>06/05/2020</td>
+    <td>06/11/2020</td>
+    <td>Principal Nivelado</td>
+    <td>6 Meses</td>
+    <td>Cancelado</td>
+   
+    <td>0003</td>
+ </tr>
+ <tr>
+    <td>004</td>
+    <td>80000</td>
+    <td>Cordobas</td>
+    <td>0.6</td>
+    <td>Credito Personales</td>
+    <td>Fondos Propios</td>
+    <td>06/05/2021</td>
+    <td>06/11/2021</td>
+    <td>Principal Nivelado</td>
+    <td>6 Meses</td>
+    <td>Cancelado</td>
+  
+    <td>0004</td>
+ </tr>
+ <tr>
+    <td>005</td>
+    <td>50000</td>
+    <td>Cordobas</td>
+    <td>0.6</td>
+    <td>Credito Personales</td>
+    <td>Fondos Propios</td>
+    <td>06/05/2021</td>
+    <td>06/11/2021</td>
+    <td>Principal Nivelado</td>
+    <td>6 Meses</td>
+    <td>Cancelado</td>
+
+    <td>0005</td>
+ </tr>
+ <tr>
+    <td>006</td>
+    <td>14000</td>
+    <td>Cordobas</td>
+    <td>0.6</td>
+    <td>Credito Personales</td>
+    <td>Fondos Propios</td>
+    <td>06/05/2021</td>
+    <td>06/11/2021</td>
+    <td>Principal Nivelado</td>
+    <td>6 Meses</td>
+    <td>Cancelado</td>
+   
+    <td>0006</td>
+ </tr>
+ <tr>
+    <td>007</td>
+    <td>50000</td>
+    <td>Cordobas</td>
+    <td>0.6</td>
+    <td>Credito Personales</td>
+    <td>Fondos Propios</td>
+    <td>06/05/2021</td>
+    <td>06/11/2021</td>
+    <td>Principal Nivelado</td>
+    <td>6 Meses</td>
+    <td>Cancelado</td>
+    
+    <td>0007</td>
+ </tr>
+ <tr>
+    <td>008</td>
+    <td>40000</td>
+    <td>Cordobas</td>
+    <td>0.6</td>
+    <td>Credito Personales</td>
+    <td>Fondos Propios</td>
+    <td>06/05/2021</td>
+    <td>06/11/2021</td>
+    <td>Principal Nivelado</td>
+    <td>6 Meses</td>
+    <td>Cancelado</td>
+    
+    <td>0008</td>
+ </tr>
+ <tr>
+    <td>009</td>
+    <td>30000</td>
+    <td>Cordobas</td>
+    <td>0.6</td>
+    <td>Credito Personales</td>
+    <td>Fondos Propios</td>
+    <td>06/05/2021</td>
+    <td>06/11/2021</td>
+    <td>Principal Nivelado</td>
+    <td>6 Meses</td>
+    <td>Cancelado</td>
+    
+    <td>0009</td>
+ </tr>
+ <tr>
+    <td>010</td>
+    <td>10000</td>
+    <td>Cordobas</td>
+    <td>0.10</td>
+    <td>Credito Personales</td>
+    <td>Fondos Propios</td>
+    <td>06/05/2021</td>
+    <td>06/11/2021</td>
+    <td>Principal Nivelado</td>
+    <td>6 Meses</td>
+    <td>Cancelado</td>
+    
+    <td>0010</td>
+ </tr>
+ <tr>
+    <td>010</td>
+    <td>10000</td>
+    <td>Cordobas</td>
+    <td>0.10</td>
+    <td>Credito Personales</td>
+    <td>Fondos Propios</td>
+    <td>06/05/2021</td>
+    <td>06/11/2021</td>
+    <td>Principal Nivelado</td>
+    <td>6 Meses</td>
+    <td>Cancelado</td>
+    
+    <td>0010</td>
+ </tr>
+ <tr>
+    <td>011</td>
+    <td>10000</td>
+    <td>Cordobas</td>
+    <td>0.10</td>
+    <td>Credito Personales</td>
+    <td>Fondos Propios</td>
+    <td>06/05/2021</td>
+    <td>06/11/2021</td>
+    <td>Principal Nivelado</td>
+    <td>6 Meses</td>
+    <td>Cancelado</td>
+    
+    <td>0010</td>
+ </tr>
+ <tr>
+    <td>012</td>
+    <td>10000</td>
+    <td>Cordobas</td>
+    <td>0.10</td>
+    <td>Credito Personales</td>
+    <td>Fondos Propios</td>
+    <td>06/05/2021</td>
+    <td>06/11/2021</td>
+    <td>Principal Nivelado</td>
+    <td>6 Meses</td>
+    <td>Cancelado</td>
+    
+    <td>0010</td>
+ </tr>
+ <tr>
+    <td>013</td>
+    <td>10000</td>
+    <td>Cordobas</td>
+    <td>0.10</td>
+    <td>Credito Personales</td>
+    <td>Fondos Propios</td>
+    <td>06/05/2021</td>
+    <td>06/11/2021</td>
+    <td>Principal Nivelado</td>
+    <td>6 Meses</td>
+    <td>Cancelado</td>
+    
+    <td>0010</td>
+ </tr>
+ <tr>
+    <td>014</td>
+    <td>10000</td>
+    <td>Cordobas</td>
+    <td>0.10</td>
+    <td>Credito Personales</td>
+    <td>Fondos Propios</td>
+    <td>06/05/2021</td>
+    <td>06/11/2021</td>
+    <td>Principal Nivelado</td>
+    <td>6 Meses</td>
+    <td>Cancelado</td>
+    
+    <td>0010</td>
+ </tr>
+ <!-- ... más filas aquí ... -->
+</table>
+
+<script>
+function searchFunction() {
+ var input, filter, table, tr, td, i, txtValue;
+ input = document.getElementById("search");
+ filter = input.value.toUpperCase();
+ table = document.getElementById("myTable");
+ tr = table.getElementsByTagName("tr");
+
+ for (i = 0; i < tr.length; i++) {
+   td = tr[i].getElementsByTagName("td")[0];
+   if (td) {
+     txtValue = td.textContent || td.innerText;
+     if (txtValue.toUpperCase().indexOf(filter) > -1) {
+       tr[i].style.display = "";
+     } else {
+       tr[i].style.display = "none";
+     }
+   }       
+ }
+}
+</script>
+
+</body>
+</html>

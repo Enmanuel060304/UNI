@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="index.css"> 
+
+    <script>
+        function searchTable() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("dataTable");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }       
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+
+        <div class="content">
+
+            <div class="menu container">
+                <a href="index.html" class="logo"> FODEMI</a>
+                <input type="checkbox" id="menu">
+                <label for="menu">
+                    <img src="img/menu.png" class="menu-icono" alt="">
+                </label>
+
+                <nav class="navbar">
+                    <ul>
+
+                        <li> <a href="index.html">Datos Cliente</a> </li>
+                        <li> <a href="servicios.html">Datos Fiador</a> </li>
+                        <li> <a href="productos.html">Bienes en garantia</a> </li>
+                        <li> <a href="consulta.html">Credito</a> </li>
+                        <li> <a href="contactos.html">Cuotas</a> </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+
+    </header>
+
+    <div class="container">
+        <h1>Tabla de datos del Cliente</h1>
+        <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Buscar por ID">
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>ID cliente</th>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Cedula</th>
+                    <th>Direccion</th>
+                    <th>N_Telefono</th>
+                    <th>ID_Fiador</th>
+                    <th>ID_Credito</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>100-001</td>
+                    <td>Juan</td>
+                    <td>Mala Paga</td>
+                    <td>002-030504-1331F</td>
+                    <td>Barrio mala muerte</td>
+                    <td>45623584</td>
+                    <td>169-001</td>
+                    <td>181-001</td>
+                </tr>
+                <tr>
+                    <td>100-002</td>
+                    <td>miguel</td>
+                    <td>Mala Paga</td>
+                    <td>002-030504-1331F</td>
+                    <td>Barrio mala muerte</td>
+                    <td>45623584</td>
+                    <td>169-002</td>
+                    <td>181-002</td>
+
+                </tr>
+                <tr>
+                    <td>100-003</td>
+                    <td>Orlando</td>
+                    <td>Mala Paga</td>
+                    <td>002-030504-1331F</td>
+                    <td>Barrio mala muerte</td>
+                    <td>45623584</td>
+                    <td>169-003</td>
+                    <td>181-003</td>
+                </tr>
+
+                <tr>
+                    <td>100-004</td>
+                    <td>Enmanuel</td>
+                    <td>Mala Paga</td>
+                    <td>002-030504-1331F</td>
+                    <td>Barrio mala muerte</td>
+                    <td>45623584</td>
+                    <td>169-004</td>
+                    <td>181-004</td>
+                </tr>
+
+                <tr>
+                    <td>100-005</td>
+                    <td>Marlon</td>
+                    <td>Mala Paga</td>
+                    <td>002-030504-1331F</td>
+                    <td>Barrio mala muerte</td>
+                    <td>45623584</td>
+                    <td>169-005</td>
+                    <td>181-005</td>
+                </tr>
+
+                <tr>
+                    <td>100-006</td>
+                    <td>Marvin</td>
+                    <td>Mala Paga</td>
+                    <td>002-030504-1331F</td>
+                    <td>Barrio mala muerte</td>
+                    <td>45623584</td>
+                    <td>169-006</td>
+                    <td>181-006</td>
+                </tr>
+
+                <tr>
+                    <td>100-007</td>
+                    <td>Roman</td>
+                    <td>Mala Paga</td>
+                    <td>002-030504-1331F</td>
+                    <td>Barrio mala muerte</td>
+                    <td>45623584</td>
+                    <td>169-007</td>
+                    <td>181-007</td>
+                </tr>
+
+                <tr>
+                    <td>100-008</td>
+                    <td>Angel</td>
+                    <td>Mala Paga</td>
+                    <td>002-030504-1331F</td>
+                    <td>Barrio mala muerte</td>
+                    <td>45623584</td>
+                    <td>169-008</td>
+                    <td>181-008</td>
+                </tr>
+                <tr>
+                    <td>100-009</td>
+                    <td>Manuel</td>
+                    <td>Mala Paga</td>
+                    <td>002-030504-1331F</td>
+                    <td>Barrio mala muerte</td>
+                    <td>45623584</td>
+                    <td>169-009</td>
+                    <td>181-009</td>
+                </tr>
+                <tr>
+                    <td>100-010</td>
+                    <td>Tilin</td>
+                    <td>Mala Paga</td>
+                    <td>002-030504-1331F</td>
+                    <td>Barrio mala muerte</td>
+                    <td>45623584</td>
+                    <td>169-010</td>
+                    <td>181-010</td>
+                </tr>
+                <tr>
+                    <td>100-003</td>
+                    <td>Orlando</td>
+                    <td>Mala Paga</td>
+                    <td>002-030504-1331F</td>
+                    <td>Barrio mala muerte</td>
+                    <td>45623584</td>
+                    <td>169-003</td>
+                    <td>181-003</td>
+                </tr>
+                <tr>
+                    <td>100-003</td>
+                    <td>Orlando</td>
+                    <td>Mala Paga</td>
+                    <td>002-030504-1331F</td>
+                    <td>Barrio mala muerte</td>
+                    <td>45623584</td>
+                    <td>169-003</td>
+                    <td>181-003</td>
+                </tr>
+                <tr>
+                    <td>100-003</td>
+                    <td>Orlando</td>
+                    <td>Mala Paga</td>
+                    <td>002-030504-1331F</td>
+                    <td>Barrio mala muerte</td>
+                    <td>45623584</td>
+                    <td>169-003</td>
+                    <td>181-003</td>
+                </tr>
+                <tr>
+                    <td>100-003</td>
+                    <td>Orlando</td>
+                    <td>Mala Paga</td>
+                    <td>002-030504-1331F</td>
+                    <td>Barrio mala muerte</td>
+                    <td>45623584</td>
+                    <td>169-003</td>
+                    <td>181-003</td>
+                </tr>
+                <tr>
+                    <td>100-003</td>
+                    <td>Orlando</td>
+                    <td>Mala Paga</td>
+                    <td>002-030504-1331F</td>
+                    <td>Barrio mala muerte</td>
+                    <td>45623584</td>
+                    <td>169-003</td>
+                    <td>181-003</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

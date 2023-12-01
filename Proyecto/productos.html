@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="index.css"> 
+</head>
+<body>
+    <header>
+
+        <div class="content">
+
+            <div class="menu container">
+                <a href="index.html" class="logo"> FODEMI</a>
+                <input type="checkbox" id="menu">
+                <label for="menu">
+                    <img src="img/menu.png" class="menu-icono" alt="">
+                </label>
+
+                <nav class="navbar">
+                    <ul>
+
+                        <li> <a href="index.html">Datos Cliente</a> </li>
+                        <li> <a href="servicios.html">Datos Fiador</a> </li>
+                        <li> <a href="productos.html">Bienes en garantia</a> </li>
+                        <li> <a href="consulta.html">Credito</a> </li>
+                        <li> <a href="contactos.html">Cuotas</a> </li>
+                    </ul>
+
+
+                </nav>
+            </div>
+
+        </div>
+
+    </header>
+
+    <h2>Bienes en Garantia</h2>
+<input type="text" id="search" onkeyup="searchFunction()" placeholder="Buscar por ID Articulo">
+<table id="myTable">
+ <tr>
+    <th>ID Articulo</th>
+    <th>Articulo</th>
+    <th>Color</th>
+    <th>Valor</th>
+    <th>Descripcion</th>
+    <th>ID_Amparo</th>
+ </tr>
+ <tr>
+    <td> 1</td>
+    <td>Televisor</td>
+    <td>Negro</td>
+    <td>10000</td>
+    <td>Seminuevo</td>
+    <td>0001</td>
+ </tr>
+ <tr>
+    <td>2</td>
+    <td>Equipo de sonido</td>
+    <td>Azul Oscuro</td>
+    <td>5000</td>
+    <td>Equipo de sonido Usado</td>
+    <td>0002</td>
+ </tr>
+ <tr>
+    <td>3</td>
+    <td>Juego de Sofa</td>
+    <td>Rojo Vino</td>
+    <td>1000</td>
+    <td>Usado en Buen Estado</td>
+    <td>0003</td> 
+ </tr>
+ <tr>
+    <td>4</td>
+    <td>Refrigeradora</td>
+    <td>Gris</td>
+    <td>15000</td>
+    <td>Nueva</td>
+    <td>0004</td>
+ </tr>
+ <tr>
+    <td>5</td>
+    <td>Cocina</td>
+    <td>Metalico</td>
+    <td>8000</td>
+    <td>usada</td>
+    <td>0005</td>
+ </tr>
+ <tr>
+    <td>6</td>
+    <td>Equipo de sonido</td>
+    <td>Azul Oscuro</td>
+    <td>5000</td>
+    <td>Equipo de sonido Usado</td>
+    <td>0006</td>
+ </tr>
+ <tr>
+    <td>7</td>
+    <td>Juego de Sofa</td>
+    <td>Rojo Vino</td>
+    <td>1000</td>
+    <td>Usado en Buen Estado</td>
+    <td>0007</td> 
+ </tr>
+ <tr>
+    <td>8</td>
+    <td>Refrigeradora</td>
+    <td>Gris</td>
+    <td>15000</td>
+    <td>Nueva</td>
+    <td>0008</td>
+ </tr>
+ <tr>
+    <td>9</td>
+    <td>Equipo de sonido</td>
+    <td>Azul Oscuro</td>
+    <td>5000</td>
+    <td>Equipo de sonido Usado</td>
+    <td>0009</td>
+ </tr>
+ <tr>
+    <td>10</td>
+    <td>Juego de Sofa</td>
+    <td>Rojo Vino</td>
+    <td>1000</td>
+    <td>Usado en Buen Estado</td>
+    <td>0010</td> 
+ </tr>
+ <tr>
+    <td>11</td>
+    <td>Juego de Sofa</td>
+    <td>Rojo Vino</td>
+    <td>1000</td>
+    <td>Usado en Buen Estado</td>
+    <td>0011</td> 
+ </tr>
+ <tr>
+    <td>12</td>
+    <td>Refrigeradora</td>
+    <td>Gris</td>
+    <td>15000</td>
+    <td>Nueva</td>
+    <td>0012</td>
+ </tr>
+ <tr>
+    <td>13</td>
+    <td>Refrigeradora</td>
+    <td>Gris</td>
+    <td>15000</td>
+    <td>Nueva</td>
+    <td>0013</td>
+ </tr>
+ <tr>
+    <td>14</td>
+    <td>Cocina</td>
+    <td>Metalico</td>
+    <td>8000</td>
+    <td>usada</td>
+    <td>0014</td>
+ </tr>
+ <tr>
+    <td>15</td>
+    <td>Juego de Sofa</td>
+    <td>Rojo Vino</td>
+    <td>1000</td>
+    <td>Usado en Buen Estado</td>
+    <td>0015</td> 
+ </tr>
+ <tr>
+    <td>16</td>
+    <td>Refrigeradora</td>
+    <td>Gris</td>
+    <td>15000</td>
+    <td>Nueva</td>
+    <td>0016</td>
+ </tr>
+ <!-- ... más filas aquí ... -->
+</table>
+
+<script>
+function searchFunction() {
+ var input, filter, table, tr, td, i, txtValue;
+ input = document.getElementById("search");
+ filter = input.value.toUpperCase();
+ table = document.getElementById("myTable");
+ tr = table.getElementsByTagName("tr");
+
+ for (i = 0; i < tr.length; i++) {
+   td = tr[i].getElementsByTagName("td")[0];
+   if (td) {
+     txtValue = td.textContent || td.innerText;
+     if (txtValue.toUpperCase().indexOf(filter) > -1) {
+       tr[i].style.display = "";
+     } else {
+       tr[i].style.display = "none";
+     }
+   }       
+ }
+}
+</script>
+
+       
+</body>
+</html>

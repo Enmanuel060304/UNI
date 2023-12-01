@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="index.css"> 
+</head>
+<body>
+    <header>
+
+        <div class="content">
+
+            <div class="menu container">
+                <a href="index.html" class="logo"> FODEMI</a>
+                <input type="checkbox" id="menu">
+                <label for="menu">
+                    <img src="img/menu.png" class="menu-icono" alt="">
+                </label>
+
+                <nav class="navbar">
+                    <ul>
+
+                        <li> <a href="index.html">Datos Cliente</a> </li>
+                        <li> <a href="servicios.html">Datos Fiador</a> </li>
+                        <li> <a href="productos.html">Bienes en garantia</a> </li>
+                        <li> <a href="consulta.html">Credito</a> </li>
+                        <li> <a href="contactos.html">Cuotas</a> </li>
+                    </ul>
+
+
+                </nav>
+            </div>
+
+        </div>
+
+    </header>
+
+    <input type="text" id="search" onkeyup="searchFunction()" placeholder="Buscar por ID_Cuotas">
+<table id="myTable">
+ <tr>
+    <th>ID_Cuotas</th>
+    <th>Cuota</th>
+    <th>Deslizamiento</th>
+    <th>Interes</th>
+    <th>saldo</th>
+    <th>fechas</th>
+    <th>Id_credito</th>
+    
+ </tr>
+ <tr>
+    <td>001</td>
+    <td>1.688</td>
+    <td>38.33</td>
+    <td>345.44</td>
+    <td>27.395</td>
+    <td>15/11/2022</td>
+    <td>0001</td>
+ </tr>
+ <tr>
+    <td>002</td>
+    <td>1.543</td>
+    <td>23.33</td>
+    <td>215.44</td>
+    <td>28.695</td>
+    <td>1/12/2022</td>
+    <td>0001</td>
+ </tr>
+ <tr>
+    <td>003</td>
+    <td>1.532</td>
+    <td>23.33</td>
+    <td>215.44</td>
+    <td>26.086</td>
+    <td>15/12/2022</td>
+    <td>0001</td>
+ </tr>
+ <tr>
+    <td>004</td>
+    <td>1.553</td>
+    <td>22.133</td>
+    <td>215.44</td>
+    <td>24.795</td>
+    <td>30/12/2022</td>
+    <td>0001</td>
+ </tr>
+ <tr>
+    <td>005</td>
+    <td>1.543</td>
+    <td>23.33</td>
+    <td>215.44</td>
+    <td>22.695</td>
+    <td>7/11/2022</td>
+    <td>0001</td>
+ </tr>
+ <tr>
+    <td>006</td>
+    <td>1.543</td>
+    <td>23.33</td>
+    <td>215.44</td>
+    <td>21.195</td>
+    <td>7/11/2022</td>
+    <td>0001</td>
+ </tr>
+ <tr>
+    <td>007</td>
+    <td>1.543</td>
+    <td>23.33</td>
+    <td>215.44</td>
+    <td>28.695</td>
+    <td>7/11/2022</td>
+    <td>0001</td>
+ </tr>
+ <tr>
+    <td>008</td>
+    <td>1.543</td>
+    <td>23.33</td>
+    <td>215.44</td>
+    <td>28.695</td>
+    <td>7/11/2022</td>
+    <td>0001</td>
+ </tr>
+ <tr>
+    <td>009</td>
+    <td>1.543</td>
+    <td>23.33</td>
+    <td>215.44</td>
+    <td>28.695</td>
+    <td>7/11/2022</td>
+    <td>0001</td>
+ </tr>
+ <tr>
+    <td>0010</td>
+    <td>1.543</td>
+    <td>23.33</td>
+    <td>215.44</td>
+    <td>28.695</td>
+    <td>7/11/2022</td>
+    <td>0001</td>   
+ </tr>
+ <tr>
+    <td>0011</td>
+    <td>1.543</td>
+    <td>23.33</td>
+    <td>215.44</td>
+    <td>28.695</td>
+    <td>7/11/2022</td>
+    <td>0001</td>   
+ </tr>
+ <tr>
+    <td>0012</td>
+    <td>1.543</td>
+    <td>23.33</td>
+    <td>215.44</td>
+    <td>28.695</td>
+    <td>7/11/2022</td>
+    <td>0001</td>   
+ </tr>
+ <tr>
+    <td>0013</td>
+    <td>1.543</td>
+    <td>23.33</td>
+    <td>215.44</td>
+    <td>28.695</td>
+    <td>7/11/2022</td>
+    <td>0001</td>   
+ </tr>
+ <tr>
+    <td>0014</td>
+    <td>1.543</td>
+    <td>23.33</td>
+    <td>215.44</td>
+    <td>28.695</td>
+    <td>7/11/2022</td>
+    <td>0001</td>   
+ </tr>
+ <tr>
+    <td>0014</td>
+    <td>1.543</td>
+    <td>23.33</td>
+    <td>215.44</td>
+    <td>28.695</td>
+    <td>7/11/2022</td>
+    <td>0001</td>   
+ </tr>
+ <tr>
+    <td>0014</td>
+    <td>1.543</td>
+    <td>23.33</td>
+    <td>215.44</td>
+    <td>28.695</td>
+    <td>7/11/2022</td>
+    <td>0001</td>   
+ </tr>
+ <tr>
+    <td>0014</td>
+    <td>1.543</td>
+    <td>23.33</td>
+    <td>215.44</td>
+    <td>28.695</td>
+    <td>7/11/2022</td>
+    <td>0001</td>   
+ </tr>
+
+ <!-- ... más filas aquí ... -->
+</table>
+
+<script>
+function searchFunction() {
+ var input, filter, table, tr, td, i, txtValue;
+ input = document.getElementById("search");
+ filter = input.value.toUpperCase();
+ table = document.getElementById("myTable");
+ tr = table.getElementsByTagName("tr");
+
+ for (i = 0; i < tr.length; i++) {
+   td = tr[i].getElementsByTagName("td")[0];
+   if (td) {
+     txtValue = td.textContent || td.innerText;
+     if (txtValue.toUpperCase().indexOf(filter) > -1) {
+       tr[i].style.display = "";
+     } else {
+       tr[i].style.display = "none";
+     }
+   }       
+ }
+}
+</script>
+</body>
+</html>

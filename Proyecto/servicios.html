@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="index.css"> 
+</head>
+<body>
+    <header>
+
+        <div class="content">
+
+            <div class="menu container">
+                <a href="index.html" class="logo"> FODEMI</a>
+                <input type="checkbox" id="menu">
+                <label for="menu">
+                    <img src="img/menu.png" class="menu-icono" alt="">
+                </label>
+
+                <nav class="navbar">
+                    <ul>
+
+                        <li> <a href="index.html">Datos Cliente</a> </li>
+                        <li> <a href="servicios.html">Datos Fiador</a> </li>
+                        <li> <a href="productos.html">Bienes en garantia</a> </li>
+                        <li> <a href="consulta.html">Credito</a> </li>
+                        <li> <a href="contactos.html">Cuotas</a> </li>
+                    </ul>
+
+
+                </nav>
+            </div>
+
+        </div>
+
+    </header>
+
+    <h2>Datos de Fiador</h2>
+
+    <div>
+        <input type="text" id="idSearch" placeholder="Ingrese ID cliente">
+        <button onclick="idSearch()">Buscar</button>
+    </div>
+
+    <table id="tableData">
+    <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Profesion</th>
+        <th>Cedula</th>
+        <th>Ingreso</th>
+        <th>Egreso</th>
+        <th>Parentesco</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Juan</td>
+        <td>Fierro</td>
+        <td>Maestro</td>
+        <td>001-462890-133u</td>
+        <td>12000</td>
+        <td>5000</td>
+        <td>cuñado</td>
+
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>pepe</td>
+        <td>martinez</td>
+        <td>Ingeniero</td>
+        <td>001-462890-133u</td>
+        <td>30000</td>
+        <td>13000</td>
+        <td>primo</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>pepe</td>
+        <td>martinez</td>
+        <td>Ingeniero</td>
+        <td>001-462890-133u</td>
+        <td>30000</td>
+        <td>13000</td>
+        <td>primo</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>pepe</td>
+        <td>martinez</td>
+        <td>Ingeniero</td>
+        <td>001-462890-133u</td>
+        <td>30000</td>
+        <td>13000</td>
+        <td>primo</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>pepe</td>
+        <td>martinez</td>
+        <td>Ingeniero</td>
+        <td>001-462890-133u</td>
+        <td>30000</td>
+        <td>13000</td>
+        <td>primo</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>pepe</td>
+        <td>martinez</td>
+        <td>Ingeniero</td>
+        <td>001-462890-133u</td>
+        <td>30000</td>
+        <td>13000</td>
+        <td>primo</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>pepe</td>
+        <td>martinez</td>
+        <td>Ingeniero</td>
+        <td>001-462890-133u</td>
+        <td>30000</td>
+        <td>13000</td>
+        <td>primo</td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>pepe</td>
+        <td>martinez</td>
+        <td>Ingeniero</td>
+        <td>001-462890-133u</td>
+        <td>30000</td>
+        <td>13000</td>
+        <td>primo</td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>pepe</td>
+        <td>martinez</td>
+        <td>Ingeniero</td>
+        <td>001-462890-133u</td>
+        <td>30000</td>
+        <td>13000</td>
+        <td>primo</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>pepe</td>
+        <td>martinez</td>
+        <td>Ingeniero</td>
+        <td>001-462890-133u</td>
+        <td>30000</td>
+        <td>13000</td>
+        <td>primo</td>
+    </tr>
+    <tr>
+        <td>11</td>
+        <td>pepe</td>
+        <td>martinez</td>
+        <td>Ingeniero</td>
+        <td>001-462890-133u</td>
+        <td>30000</td>
+        <td>13000</td>
+        <td>primo</td>
+    </tr>
+    <tr>
+        <td>12</td>
+        <td>pepe</td>
+        <td>martinez</td>
+        <td>Ingeniero</td>
+        <td>001-462890-133u</td>
+        <td>30000</td>
+        <td>13000</td>
+        <td>primo</td>
+    </tr>
+    <tr>
+        <td>13</td>
+        <td>pepe</td>
+        <td>martinez</td>
+        <td>Ingeniero</td>
+        <td>001-462890-133u</td>
+        <td>30000</td>
+        <td>13000</td>
+        <td>primo</td>
+    </tr>
+    <tr>
+        <td>14</td>
+        <td>pepe</td>
+        <td>martinez</td>
+        <td>Ingeniero</td>
+        <td>001-462890-133u</td>
+        <td>30000</td>
+        <td>13000</td>
+        <td>primo</td>
+    </tr>
+    <!-- ... más registros -->
+    </table>
+
+    <script>
+    function idSearch() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("idSearch");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("tableData");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+        } else {
+            tr[i].style.display = "none";
+        }
+        }       
+    }
+    }
+    </script>
+</body>
+</html>
