@@ -6,22 +6,22 @@ GO
 
 CREATE TABLE PRODUCTO
 (
-idprod char(7) PRIMARY KEY,
-descripcion varchar(25),
-existencias int, -- cantidad de producto existente
-precio decimal(10,2) not null, -- precio costo
-preciov decimal(10,2) not null, --precio venta
-ganancia as preciov - precio, --campo calculado para calcular ganancia
-CHECK(preciov>precio) --precio venta tiene que ser mayor al precio de compra
+    idprod char(7) PRIMARY KEY,
+    descripcion varchar(25),
+    existencias int, -- cantidad de producto existente
+    precio decimal(10,2) not null, -- precio costo
+    preciov decimal(10,2) not null, --precio venta
+    ganancia as preciov - precio, --campo calculado para calcular ganancia
+    CHECK(preciov>precio) --precio venta tiene que ser mayor al precio de compra
 )
 GO
 
 CREATE TABLE PEDIDO
 (
-idpedido char(7),
-idprod char(7),
-cantidad int --cantidad de unidades vendidad del producto en el pedido
-FOREIGN KEY(idprod) REFERENCES PRODUCTO(idprod)
+    idpedido char(7),
+    idprod char(7),
+    cantidad int --cantidad de unidades vendidad del producto en el pedido
+    FOREIGN KEY(idprod) REFERENCES PRODUCTO(idprod)
 )
 
 
