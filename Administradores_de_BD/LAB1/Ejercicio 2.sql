@@ -2,8 +2,8 @@ CREATE PROCEDURE sp_Hay_ClientesSuCarnet
 @ciudad varchar(15)
 AS
 SELECT 
-CASE (SELECT COUNT(*) FROM Customers WHERE City=@ciudad)
-WHEN 0 THEN 'No hay Clientes en la ciudad de ' + @ciudad
+CASE (SELECT COUNT(*) FROM Customer WHERE City=@ciudad)
+    WHEN 0 THEN 'No hay Clientes en la ciudad de ' + @ciudad
 ELSE 'Hay clientes en la ciudad de ' + @ciudad
 END 
 
