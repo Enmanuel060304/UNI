@@ -42,3 +42,4 @@ GO
 
 EXEC PROCE_TotalSuCarnet 10248
 EXEC PROCE_TotalSuCarnet 10242
+

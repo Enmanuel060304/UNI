@@ -123,3 +123,4 @@ ALTER PROCEDURE sp_realiza_pedido
             VALUES (@idpedido,@idprod,@cantidad)
 
 EXEC sp_realiza_pedido 1, hola2, 30
+
