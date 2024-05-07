@@ -118,3 +118,4 @@ CREATE TABLE DetallePedido
     FOREIGN KEY (idPedido) REFERENCES Pedidos (idPedido),
     FOREIGN KEY (idProducto) REFERENCES Productos (idProducto)
 );
+
